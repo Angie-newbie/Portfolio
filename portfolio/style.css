@@ -1,7 +1,7 @@
 :root{
     --sky-blue: #8ecae6ff;
     --blue-green: #219ebcff;
-    --prussian-blue: #023047ff;
+    --myorange: rgb(243, 207, 158);
     --selective-yellow: #ffb703ff;
     --ut-orange: #fb8500ff;
 
@@ -14,15 +14,33 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+body{
+    background-color: var(--sky-blue);
+}
+
 header {
     background-color: var(--blue-green);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.AboutMe{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.AboutMe>h1 {
+     padding: 2rem;
 }
 
 .About{
     display: flex;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     line-height: 50px;
     justify-content: center;
     align-items: center;
@@ -30,20 +48,102 @@ header {
     background-color: var(--selective-yellow);
     border: solid var(--selective-yellow);
     z-index:1;
+    left:50px;
 }
 
 .Project{
     display: flex;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     line-height: 50px;
     justify-content: center;
     align-items: center;
     border-radius:100px;
     background-color: var(--blue-green);
+    border: solid var(--blue-green);
     z-index:1;
-    left:100px;
+    left:300px;
+    top: 450px;
+}
+
+.Skill{
+    display: flex;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    line-height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius:100px;
+    background-color: var(--ut-orange);
+    border: solid var(--ut-orange);
+    z-index:1;
+    left:150px;
+    top: 500px;
+}
+
+#AboutPopUp {
+    background-color: var(--myorange);
+    top: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#AboutPopUp > .CloseAbout {
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    border-radius:100px;
+    width: 20px;
+    height: 20px;
+}
+
+#ProjectPopUp {
+    background-color: var(--myorange);
+    top: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#ProjectPopUp > .CloseProject {
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    border-radius:100px;
+    width: 20px;
+    height: 20px;
+}
+
+#SkillPopUp {
+    background-color: var(--myorange);
+    top: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#SkillPopUp > .CloseSkill {
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    border-radius:100px;
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 0.5 rem;
+    background-color:var(--myorange) ;
 }
 
 /* Tabelet */
