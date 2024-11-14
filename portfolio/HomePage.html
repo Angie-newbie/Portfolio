@@ -11,8 +11,15 @@
         <h1>Angie Yang</h1>
     </header>
     
-    <div class="Floating Menu">
-        
+    <button class="FloatingMenu" popovertarget="MenuPopUp">Menu</button>
+    <div id="MenuPopUp" popover>
+        <ul>
+            <li><button onclick="location.href=''">About Me</button></li>
+            <li></li><button onclick="location.href=''">Project</button></li>
+            <li></li><button onclick="location.href=''">Skill</button></li>
+            <li></li><button onclick="location.href=''">Home</button></li>
+        </ul>
+
     </div>
 
     <section class="AboutMe">
@@ -20,30 +27,33 @@
         <h1> Full-Stack Developer - Angie Yang </h1>
     </section>
 
-    <section> 
-        <button class="About" popovertarget="AboutPopUp">About</button>
-        <div id="AboutPopUp" popover>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
-            <a href="" class="AboutMore">More</a>
-            <button class="CloseAbout" popovertarget="AboutPopUp" popovertargetaction="hide"> X </button>
-        </div>
-    </section>
-    <section> 
-        <button class="Project" popovertarget="ProjectPopUp">Project</button>
-        <div id="ProjectPopUp" popover>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
-            <a href="" class="ProjectMore">More</a>
-            <button class="CloseProject" popovertarget="ProjectPopUp" popovertargetaction="hide"> X </button>
-        </div>
-    </section>
-    <section> 
-        <button class="Skill" popovertarget="SkillPopUp">Skill</button>
-        <div id="SkillPopUp" popover>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
-            <a href="" class="SkillMore">More</a>
-            <button class="CloseSkill" popovertarget="SkillPopUp" popovertargetaction="hide"> X </button>
-        </div>
-    </section>
+    <div class="button-container">
+        <section> 
+            <button class="About" popovertarget="AboutPopUp">About</button>
+            <div id="AboutPopUp" popover>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
+                <a href="" class="AboutMore">More</a>
+                <button class="CloseAbout" popovertarget="AboutPopUp" popovertargetaction="hide"> X </button>
+            </div>
+        </section>
+        <section> 
+            <button class="Project" popovertarget="ProjectPopUp">Project</button>
+            <div id="ProjectPopUp" popover>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
+                <a href="" class="ProjectMore">More</a>
+                <button class="CloseProject" popovertarget="ProjectPopUp" popovertargetaction="hide"> X </button>
+            </div>
+        </section>
+        <section> 
+            <button class="Skill" popovertarget="SkillPopUp">Skill</button>
+            <div id="SkillPopUp" popover>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
+                <a href="" class="SkillMore">More</a>
+                <button class="CloseSkill" popovertarget="SkillPopUp" popovertargetaction="hide"> X </button>
+            </div>
+        </section>
+    
+    </div>
 
     <footer>
         <a href="" class="FooterAbout">About</a>
