@@ -47,9 +47,9 @@ h1 {
     background-color: var(--ut-orange);
     border: solid var(--ut-orange);
     border-radius: 10%;
-    height: 40vh;
+    height: 50vh;
     width: 40vh;
-    padding: 10px;
+    padding:2%;
     position: fixed;  
     top: 5%;
     left: 40%;
@@ -60,7 +60,7 @@ h1 {
     right: 3%;
     top: 2%;
     border-radius:100%;
-    width: 10%;
+    width: 13%;
     height: 10%;
 }
 
@@ -145,8 +145,7 @@ footer {
 .Skill{
     display: flex;
     justify-content: space-around;  
-    align-items: center;            
-    height: 10vh;                   
+    align-items: center;                              
     position: relative;     
     width: 10rem;
     height: 10rem;
@@ -213,64 +212,73 @@ footer {
 
 /* AboutPage*/
     /* UpperSection*/
-.AboutPage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "leftside rightside"
-    "othertext othertext";
-    gap: 1rem;
-    padding: 3%;
-    margin: 0;
-    column-gap: 0%;
+.AboutMeContent{
+    padding: 1rem;
+    padding-bottom: 3rem;
 }
 
-.AboutPage > .leftside {
-    grid-area: leftside;
+.AboutMeContent > h1{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0%;
 }
 
-.AboutPage > .leftside > h1 {
-    display: flex;
-    margin-bottom: 5%;
-}
-
-/* Styling the paragraph text */
-.intro {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0%;
-}
-
-.rightside {
-    grid-area: rightside;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-}
-
-.rightside > .Aboutmeimage{
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0%;
-}
-
-.othertext {
-    grid-area: othertext;
-    grid-column: span 2;
-    font-size: 1rem;
-    line-height: 1.6;
-    display: flex;
+.AboutMeImageClass {
+    float: right;
+    shape-outside: url("https://placehold.co/200x200");
+    shape-margin: 2%;
 }
     /* UpperSection end*/
     /* BottomSection*/
 
+.LifeButton{
+    display: flex;
+    justify-content: space-around;  
+}
+
+.DeveloperLife{
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;            
+    height: 10vh;                   
+    position: relative;     
+    width: 5rem;
+    height: 5rem;
+    border-radius:100%;
+    background-color: var(--selective-yellow);
+    border: solid var(--selective-yellow);
+    transform: translateY(-10%);
+    }
+    
+.HobbyLife{
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;            
+    height: 10vh;                   
+    position: relative;     
+    width: 5rem;
+    height: 5rem;
+    border-radius:100%;
+    background-color: var(--blue-green);
+    border: solid var(--blue-green);
+    }
+    
+.FactAboutMe{
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;                           
+    width: 5rem;
+    height: 5rem;
+    border-radius:100%;
+    background-color: var(--ut-orange);
+    border: solid var(--ut-orange);
+    }
+
+.LifeButton > .DeveloperLifePopUp{
+    background-color: var(--myorange);
+    top: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
 
 
 /* Tabelet */
