@@ -18,6 +18,7 @@ body{
     background-color: var(--sky-blue);
 }
 
+/* Styling the Header for all pages*/
 header {
     background-color: var(--selective-yellow);
     padding: 20px;
@@ -26,16 +27,9 @@ header {
 h1 {
     text-align: center;
 }
+/* Header End*/
 
-.AboutMe{
-    text-align: center;
-    margin: 1.5rem;
-}
-
-.AboutMe>h1 {
-     padding: 2rem;
-}
-
+/* Floating Menu for all pages*/
 .FloatingMenu {
     position: fixed;
     right: 0%;
@@ -88,7 +82,35 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+/* Menu End*/
 
+/* Styling the footer for all pages*/
+footer {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 0.5 rem;
+    background-color:var(--myorange) ;
+}
+/* Footer End*/
+
+
+/* HomePage */
+
+.AboutMe{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.AboutMe>h1 {
+     padding: 2rem;
+}
+
+    /* Pop-Up Buttons (need to hover) */
 .About{
     display: flex;
     justify-content: space-around;  
@@ -187,17 +209,68 @@ h1 {
     height: 20px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    padding: 0.5 rem;
-    background-color:var(--myorange) ;
+/* HomePage End*
+
+/* AboutPage*/
+    /* UpperSection*/
+.AboutPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "leftside rightside"
+    "othertext othertext";
+    gap: 1rem;
+    padding: 3%;
+    margin: 0;
+    column-gap: 0%;
 }
+
+.AboutPage > .leftside {
+    grid-area: leftside;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0%;
+}
+
+.AboutPage > .leftside > h1 {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+/* Styling the paragraph text */
+.intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0%;
+}
+
+.rightside {
+    grid-area: rightside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+}
+
+.rightside > .Aboutmeimage{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0%;
+}
+
+.othertext {
+    grid-area: othertext;
+    grid-column: span 2;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+}
+    /* UpperSection end*/
+    /* BottomSection*/
+
 
 
 /* Tabelet */
