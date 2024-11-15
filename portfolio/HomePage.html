@@ -11,28 +11,34 @@
         <h1>Angie Yang</h1>
     </header>
     
-    <button class="FloatingMenu" popovertarget="MenuPopUp">Menu</button>
-    <div id="MenuPopUp" popover>
-        <ul>
-            <li><button onclick="location.href=''">About Me</button></li>
-            <li></li><button onclick="location.href=''">Project</button></li>
-            <li></li><button onclick="location.href=''">Skill</button></li>
-            <li></li><button onclick="location.href=''">Home</button></li>
-        </ul>
+    <!--Floating Pop-Up Menu-->
+    <section>
+        <button class="FloatingMenu" popovertarget="Menu">Menu</button>
+        <div id="Menu" popover>
+            <ul>
+                <li><button onclick="location.href='AboutPage.html'">About Me</button></li>
+                <li><button onclick="location.href=''">Project</button></li>
+                <li><button onclick="location.href=''">Skill</button></li>
+                <li><button onclick="location.href=''">Home</button></li>
+            </ul>
+            <button class="CloseMenu" popovertarget="Menu" popovertargetaction="hide"> X </button>
 
-    </div>
+        </div>
+    </section>
 
+    <!--Basic Information-->
     <section class="AboutMe">
         <img src="https://placehold.co/400x200" alt="Home Image">
         <h1> Full-Stack Developer - Angie Yang </h1>
     </section>
 
+    <!--Pop-Up Buttons-->
     <div class="button-container">
         <section> 
             <button class="About" popovertarget="AboutPopUp">About</button>
             <div id="AboutPopUp" popover>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus voluptatum, quae dolore quis officia consequuntur perspiciatis rem illum porro veritatis nostrum mollitia! Necessitatibus adipisci saepe molestiae. Aperiam, voluptatem maxime.</p>
-                <a href="" class="AboutMore">More</a>
+                <a href="AboutPage.html" class="AboutMore">More</a>
                 <button class="CloseAbout" popovertarget="AboutPopUp" popovertargetaction="hide"> X </button>
             </div>
         </section>
@@ -56,7 +62,7 @@
     </div>
 
     <footer>
-        <a href="" class="FooterAbout">About</a>
+        <a href="AboutPage.html" class="FooterAbout">About</a>
         <a href="" class="FooterProject">Project</a>
         <a href="" class="FooterContactMe">Contact Me</a>
     </footer>
