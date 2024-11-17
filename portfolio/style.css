@@ -325,6 +325,40 @@ footer {
     border: solid var(--ut-orange);
     }
 
+/* Popover styling */
+#DeveloperLifePopUp, #HobbyLifePopUp, #FactAboutMePopUp {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 3%;
+    transform: translateX(-50%);
+    width: 60%;
+    background-color: var(--myorange);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* Show popover when button is focused */
+button:focus + #DeveloperLifePopUp,
+button:active + #DeveloperLifePopUp {
+    display: block;
+}
+
+
+button:focus + #HobbyLifePopUp,
+button:active + #HobbyLifePopUp {
+    display: block;
+}
+
+
+button:focus + #FactAboutMePopUp,
+button:active + #FactAboutMePopUp {
+    display: block;
+}
 
 /*Project Page Start*/
 .Scrollmenu{
@@ -354,14 +388,28 @@ footer {
     margin-bottom: 10px;
 }
 
+
+
 /*Project Page End*/
 
 /*Skill Page Start*/
+.WorkingHistory{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.WorkingHistory ul{
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
 .Front-endGroup{
-    position: absolute;
-
-    
-
+    position: relative; 
+    width: 100%;
+    height: 20vh;
+    margin-top: 1rem;
 }
 
 .FrontendLanguage{
@@ -369,21 +417,90 @@ footer {
     width: 30vw;
     height: 5vw;
     border-radius: 20%;
-    text-align: center;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
     display: flex;
+    align-items: center;
     justify-content: center;
-    top:10vw;
-    transform: translateX(50%)
-    
 }
 
+.ImageSection {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    z-index: 2;
+}
+
+.ImageSection img {
+    width: 20%;
+}
 
 .FrontendLanguageBackground{
-    height:20vw;
-    width: 100vw;
+    height:20vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position:absolute;
     background-color: var(--myorange);
+    z-index: 1;
 
 }
+
+.Back-endGroup{
+    position: relative; 
+    width: 100%;
+    height: 20vh;
+    margin-top: 4rem;
+}
+
+.BackendLanguage{
+    background-color: var(--ut-orange);
+    width: 30vw;
+    height: 5vw;
+    border-radius: 20%;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BackImageSection {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    z-index: 2;
+}
+
+.BackImageSection img {
+    width: 20%;
+}
+
+.BackendLanguageBackground{
+    height:20vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position:absolute;
+    background-color: var(--myorange);
+    z-index: 1;
+
+}
+/*Skill Page end*/
 /*Skill Page end*/
 
 /*Contact Page Start*/
@@ -440,7 +557,68 @@ footer {
         margin: 2vh;
         font-size: 1.5rem;
     }
+        /*skill Page*/
+        .FrontendLanguage {
+            width: 20vw; 
+            height: 4vw;
+            position: absolute;
+            bottom: -5.3rem;
+        }
+      
+        .ImageSection {
+            top: 60%; 
+            left: 50%;
+            width: 80%; 
+        }
+    
+        .ImageSection img {
+            max-width: 20%; 
+        }
+    
+        .FrontendLanguageBackground {
+        height: 30vh; 
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: var(--myorange);
+        z-index: 1;
+        }
 
+        .Back-endGroup{
+            margin-top: 8rem;
+        }    
+
+        .BackendLanguage {
+            width: 20vw; 
+            height: 4vw;
+            position: absolute;
+            bottom: -5.3rem;
+        }
+      
+        .BackImageSection {
+            top: 60%; 
+            left: 50%;
+            width: 80%; 
+        }
+    
+        .BackImageSection img {
+            max-width: 20%; 
+        }
+    
+        .BackendLanguageBackground {
+        height: 30vh; 
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: var(--myorange);
+        z-index: 1;
+        }
+
+        footer{
+            z-index: 100;
+        }
 
   }
 
@@ -466,38 +644,67 @@ footer {
         height: 20rem;
         font-size:2.5rem;
     }
-}
-/* Popover styling */
-#DeveloperLifePopUp, #HobbyLifePopUp, #FactAboutMePopUp {
-    display: none;
+    /*skill Page*/
+    .FrontendLanguage {
+        width: 20vw; 
+        height: 3vw;
+        position: absolute;
+        bottom: -6rem;
+    }
+  
+    .ImageSection {
+        top: 70%; 
+        left: 50%;
+        width: 60%; 
+    }
+
+    .ImageSection img {
+        max-width: 20%; 
+    }
+
+    .FrontendLanguageBackground {
+    height: 30vh; 
+    width: 100%;
+    top: 0;
+    left: 0;
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-top: 3%;
-    transform: translateX(-50%);
-    width: 60%;
     background-color: var(--myorange);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 5;
+    z-index: 1;
+    }
+
+    .Back-endGroup{
+        margin-top: 9rem;
+    }
+
+
+    .BackendLanguage {
+        width: 20vw; 
+        height: 3vw;
+        position: absolute;
+        bottom: -6rem;
+    }
+  
+    .BackImageSection {
+        top: 70%; 
+        left: 50%;
+        width: 60%; 
+    }
+
+    .BackImageSection img {
+        max-width: 20%; 
+    }
+
+    .BackendLanguageBackground {
+        height: 30vh; 
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: var(--myorange);
+        z-index: 1;
+    }
+    footer{
+        z-index: 100;
+    }
 }
 
-/* Show popover when button is focused */
-button:focus + #DeveloperLifePopUp,
-button:active + #DeveloperLifePopUp {
-    display: block;
-}
-
-
-button:focus + #HobbyLifePopUp,
-button:active + #HobbyLifePopUp {
-    display: block;
-}
-
-
-button:focus + #FactAboutMePopUp,
-button:active + #FactAboutMePopUp {
-    display: block;
-}
