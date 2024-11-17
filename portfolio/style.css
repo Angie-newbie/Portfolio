@@ -232,6 +232,7 @@ footer {
 .LifeButton{
     display: flex;
     justify-content: space-around;  
+
 }
 
 .DeveloperLife{
@@ -272,14 +273,49 @@ footer {
     border: solid var(--ut-orange);
     }
 
-.LifeButton > .DeveloperLifePopUp{
-    background-color: var(--myorange);
-    top: 300px;
+#DeveloperLifePopUp{
+    background: none;
+    border: 0;
+    top: 70%;
     border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
+    padding: 1rem;
+    margin: 1rem;
+}
+#HobbyLifePopUp{
+    background: none;
+    border: 0;
+    top: 70%;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+#FactAboutMePopUp{
+    background: none;
+    border: 0;
+    top: 70%;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+
 }
 
+.pop-upbackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Rectangle {
+    margin-top: 2rem;
+    height: 30vh;
+    width: 100%;
+    background-color: var(--myorange);
+
+}
+
+/*Project Page Start*/
+.Scrollmenu{
+    color: aqua;
+}
 
 /* Tabelet */
 @media screen and (min-width: 640px) and (max-width: 999px) {
