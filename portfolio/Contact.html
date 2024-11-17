@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Angie Yang</h1>
+    </header>
+    
+    <!--Floating Pop-Up Menu-->
+    <section>
+        <button class="FloatingMenu" popovertarget="Menu">Menu</button>
+        <div id="Menu" popover>
+            <ul>
+                <li><button onclick="location.href='AboutPage.html'">About Me</button></li>
+                <li><button onclick="location.href='ProjectPage.html'">Project</button></li>
+                <li><button onclick="location.href='SkillPage.html'">Skill</button></li>
+                <li><button onclick="location.href='Contact.html'">Contact</button></li>
+                <li><button onclick="location.href='HomePage.html'">Home</button></li>
+            </ul>
+            <button class="CloseMenu" popovertarget="Menu" popovertargetaction="hide"> X </button>
+
+        </div>
+    </section>
+
+
+    <h1> Contact </h1>
+    <h2>Contact Me</h2>
+    <form action="">
+        <div>
+        <label for="fullname">Full Name </label>
+        <input type="text" placeholder="Full Name" name="fullname" id="fullname">
+        </div>
+        <div>
+        <label for="email"> Email Adress</label>
+        <input type="email" required placeholder="Email Adress" name="email" id="email">
+        </div>
+ 
+        <div>
+            <label for="abstract"> Message</label>
+            <textarea name="abstract" id="abstract" placeholder="Please type something"></textarea>
+        </div>
+        <div>
+            <button> Submit</button>
+            <button type="reset"> Clear</button>
+        </div>
+
+    </form>
+
+    <footer>
+        <a href="AboutPage.html" class="FooterAbout">About</a>
+        <a href="ProjectPage.html" class="FooterProject">Project</a>
+        <a href="Contact.html" class="FooterContactMe">Contact Me</a>
+    </footer>
+
+    
+
+    
+
+    
+</body>
+</html>
