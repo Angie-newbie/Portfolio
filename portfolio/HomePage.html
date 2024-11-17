@@ -7,25 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Angie Yang</h1>
-    </header>
-    
-    <!--Floating Pop-Up Menu-->
-    <section>
-        <button class="FloatingMenu" popovertarget="Menu">Menu</button>
+    <div>
+        <header>
+            <h1>Angie Yang</h1>
+            <button class="FloatingMenu" popovertarget="Menu">Menu</button>
+        </header>
+        
         <div id="Menu" popover>
             <ul>
                 <li><button onclick="location.href='AboutPage.html'">About Me</button></li>
                 <li><button onclick="location.href='ProjectPage.html'">Project</button></li>
                 <li><button onclick="location.href='SkillPage.html'">Skill</button></li>
                 <li><button onclick="location.href='Contact.html'">Contact</button></li>
-                <li><button onclick="location.href='HomePage,html'">Home</button></li>
+                <li><button onclick="location.href='HomePage.html'">Home</button></li>
             </ul>
-            <button class="CloseMenu" popovertarget="Menu" popovertargetaction="hide"> X </button>
-
+            <button class="CloseMenu" popovertarget="Menu" popovertargetaction="hide">X</button>
         </div>
-    </section>
+        </div>
 
     <!--Basic Information-->
     <section class="AboutMe">
