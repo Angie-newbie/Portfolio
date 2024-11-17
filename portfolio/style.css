@@ -35,7 +35,7 @@ header {
     align-items: center;
 }
 
-header h1 {
+header > h1 {
     margin: 0;
     text-align: center;
     flex-grow: 1;
@@ -99,7 +99,29 @@ h1 {
     background-color: var(--selective-yellow);
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
+
+#Menu ul li button::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--sky-blue);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+#Menu ul li button:hover::before, #Menu ul li button:focus::before{
+    transform: scaleX(1);
+}
+
 /* Menu End*/
 
 /* Styling the footer for all pages*/
@@ -113,6 +135,8 @@ footer {
     justify-content: space-evenly;
     padding: 0.5 rem;
     background-color:var(--myorange) ;
+    height: 2rem;
+    align-items: center;
 }
 /* Footer End*/
 
@@ -122,10 +146,15 @@ footer {
 .AboutMe{
     text-align: center;
     margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .AboutMe>h1 {
      padding: 2rem;
+     font-size: 1.5rem;
 }
 
     /* Pop-Up Buttons (need to hover) */
@@ -226,6 +255,13 @@ footer {
     height: 20px;
 }
 
+.button-container button{
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+.button-container button:hover{
+    transform: scale(1.5);
+}
 /* HomePage End*
 
 /* AboutPage*/
@@ -345,6 +381,20 @@ footer {
     padding: 2%;
     text-decoration: none;
 }
+
+.ProjectList{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    padding: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#Front-End, #Back-End, #Full-End, #other {
+   padding: 2rem;
+}
+
 /*Project Page End*/
 
 /*Skill Page Start*/
@@ -393,6 +443,9 @@ footer {
 /* Tabelet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /*HomePage*/
+    .AboutMeContent > h1{
+        font-size: 2rem;
+    }
 
     .About, .Project, .Skill {
         width: 10rem;
@@ -402,8 +455,31 @@ footer {
         transform: none;
         display: block;
         margin: 2vh;
+        font-size: 1.5rem;
+    }
+
   }
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
+    /*Menu*/
+    .FloatingMenu {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        left:1vw;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 0;
+    }
+
+
+
+    /*Home Page*/
+    .About, .Project, .Skill {
+        width: 20rem;
+        height: 20rem;
+        font-size:2.5rem;
+    }
 }
