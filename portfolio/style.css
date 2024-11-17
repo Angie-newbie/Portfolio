@@ -156,7 +156,7 @@ footer {
      font-size: 1.5rem;
 }
 
-    /* Pop-Up Buttons (need to hover) */
+    /* Pop-Up Buttons */
 .About{
     display: flex;
     justify-content: space-around;  
@@ -543,6 +543,12 @@ button:active + #FactAboutMePopUp {
 /* Tabelet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /*HomePage*/
+    .AboutMe{
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    }
+
     .AboutMeContent > h1{
         font-size: 2rem;
     }
@@ -557,6 +563,45 @@ button:active + #FactAboutMePopUp {
         margin: 2vh;
         font-size: 1.5rem;
     }
+
+    #AboutPopUp, #ProjectPopUp, #SkillPopUp {
+        display: none;
+        position: absolute;
+        top: 70%;
+        left: 58%;
+        margin-top: 3%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 40%;
+        background-color: var(--myorange);
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        z-index: 5;
+    }
+    
+    /* Show popover when button is focused */
+    button:focus + #AboutPopUp,
+    button:active + #AboutPopUp {
+        display: block;
+    }
+    
+    
+    button:focus + #ProjectPopUp,
+    button:active + #ProjectLifePopUp {
+        display: block;
+    }
+    
+    
+    button:focus + #SkillPopUp,
+    button:active + #SkillPopUp {
+        display: block;
+    }
+
+
+
+
+
         /*skill Page*/
         .FrontendLanguage {
             width: 20vw; 
@@ -625,25 +670,31 @@ button:active + #FactAboutMePopUp {
 /* Desktop */
 @media only screen and (min-width: 1024px) {
     /*Menu*/
-    .FloatingMenu {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-        left:1vw;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        line-height: 0;
-    }
-
-
 
     /*Home Page*/
+    .AboutMe{
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
     .About, .Project, .Skill {
         width: 20rem;
         height: 20rem;
         font-size:2.5rem;
     }
+
+    #AboutPopUp, #ProjectPopUp, #SkillPopUp{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 40%;
+
+    }
+
     /*skill Page*/
     .FrontendLanguage {
         width: 20vw; 
