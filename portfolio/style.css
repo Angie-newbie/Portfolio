@@ -68,6 +68,7 @@ h1 {
     display: flex;
     width: 90%;
     flex-direction: column;
+    list-style-type: none;
 }
 
 #Menu ul li button {
@@ -314,7 +315,46 @@ footer {
 
 /*Project Page Start*/
 .Scrollmenu{
-    color: aqua;
+    background-color: var(--myorange);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto; 
+}
+
+.Scrollmenu>button{
+    
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+}
+/*Project Page End*/
+
+/*Skill Page Start*/
+.Front-endGroup{
+    position: absolute;
+
+    
+
+}
+.FrontendLanguage{
+    background-color: var(--ut-orange);
+    width: 30%;
+    height: 5%;
+    border-radius: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    top:10vh;
+    transform: translateX(50%)
+    z-index:1;
+}
+
+.FrontendLanguageBackground{
+    height:10vh;
+    width: 50vh;
+    background-color: var(--myorange);
+
 }
 
 /* Tabelet */
