@@ -18,7 +18,6 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
 }
     
 
@@ -286,6 +285,7 @@ footer {
 .LifeButton{
     display: flex;
     justify-content: space-around;  
+    position: relative;
 
 }
 
@@ -293,7 +293,6 @@ footer {
     display: flex;
     justify-content: space-around;  
     align-items: center;            
-    height: 10vh;                   
     position: relative;     
     width: 5rem;
     height: 5rem;
@@ -307,7 +306,6 @@ footer {
     display: flex;
     justify-content: space-around;  
     align-items: center;            
-    height: 10vh;                   
     position: relative;     
     width: 5rem;
     height: 5rem;
@@ -327,44 +325,6 @@ footer {
     border: solid var(--ut-orange);
     }
 
-#DeveloperLifePopUp{
-    background: none;
-    border: 0;
-    top: 70%;
-    border-radius: 20px;
-    padding: 1rem;
-    margin: 1rem;
-}
-#HobbyLifePopUp{
-    background: none;
-    border: 0;
-    top: 70%;
-    border-radius: 20px;
-    padding: 1rem;
-    margin: 1rem;
-}
-#FactAboutMePopUp{
-    background: none;
-    border: 0;
-    top: 70%;
-    border-radius: 20px;
-    padding: 1rem;
-    margin: 1rem;
-
-}
-
-.pop-upbackground{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Rectangle {
-    margin-top: 2rem;
-    height: 30vh;
-    width: 100%;
-    background-color: var(--myorange);
-
-}
 
 /*Project Page Start*/
 .Scrollmenu{
@@ -376,7 +336,6 @@ footer {
 }
 
 .Scrollmenu>button{
-    
     text-align: center;
     padding: 2%;
     text-decoration: none;
@@ -391,8 +350,8 @@ footer {
     align-items: center;
 }
 
-#Front-End, #Back-End, #Full-End, #other {
-   padding: 2rem;
+.ProjectList>section{
+    margin-bottom: 10px;
 }
 
 /*Project Page End*/
@@ -437,8 +396,32 @@ footer {
 }
 
 .ContactForm{
-    padding-top: 3vh;
+    background-color: var(--selective-yellow);
+    border-radius: 2rem;
+    padding: 3vh;
+    margin: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
 }
+.ContactForm div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    align-items: center; 
+}
+
+
+.ContactForm input, .ContactForm textarea, .ContactForm button {
+    flex: 3; 
+    padding: 0.4rem;
+}
+
+.ContactForm input {
+    max-width: 200px;
+}
+
 
 /* Tabelet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -457,6 +440,7 @@ footer {
         margin: 2vh;
         font-size: 1.5rem;
     }
+
 
   }
 
@@ -482,4 +466,38 @@ footer {
         height: 20rem;
         font-size:2.5rem;
     }
+}
+/* Popover styling */
+#DeveloperLifePopUp, #HobbyLifePopUp, #FactAboutMePopUp {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 3%;
+    transform: translateX(-50%);
+    width: 60%;
+    background-color: var(--myorange);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* Show popover when button is focused */
+button:focus + #DeveloperLifePopUp,
+button:active + #DeveloperLifePopUp {
+    display: block;
+}
+
+
+button:focus + #HobbyLifePopUp,
+button:active + #HobbyLifePopUp {
+    display: block;
+}
+
+
+button:focus + #FactAboutMePopUp,
+button:active + #FactAboutMePopUp {
+    display: block;
 }
